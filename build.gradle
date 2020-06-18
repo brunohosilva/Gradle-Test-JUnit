@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'app.Principal'
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/main'
+        }
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+run{
+    standardInput = System.in
+}
+
+dependencies {
+    testCompileOnly 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'org.json:json:20200518'
+    compile 'com.google.code.gson:gson:2.8.6'
+}
+
+test {
+    useJUnitPlatform()
+} 
