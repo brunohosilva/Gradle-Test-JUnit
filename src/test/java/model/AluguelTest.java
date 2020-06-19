@@ -15,42 +15,42 @@ public class AluguelTest {
    // -----------------------   Casos de testes --------------------------------//
 
     @Test
-    public void FirstCaseDay2() throws IOException {
-        assertEquals(2700, calc(3000, 2));
+    public void FirstCaseDay1() throws IOException {
+        assertEquals(2700, calc(3000, 1));
     }
 
     @Test
-    public void FirstCaseDay4() throws IOException {
-        assertEquals(2700, calc(3000, 4));
+    public void FirstCaseDay5() throws IOException {
+        assertEquals(2700, calc(3000, 5));
     }
 
     @Test
-    public void SecondCaseDay7() throws IOException {
-        assertEquals(2850, calc(3000, 7) );
+    public void SecondCaseDay6() throws IOException {
+        assertEquals(2850, calc(3000, 6) );
     }
 
     @Test
-    public void SecondCaseDay9() throws IOException {
-        assertEquals(2850, calc(3000, 9) );
+    public void SecondCaseDay10() throws IOException {
+        assertEquals(2850, calc(3000, 10) );
     }
 
     @Test
-    public void ThirdCaseDay12() throws IOException {
-        assertEquals(3000, calc(3000, 12));
+    public void ThirdCaseDay11() throws IOException {
+        assertEquals(3000, calc(3000, 11));
     }
 
     @Test
-    public void ThirdCaseDay14() throws IOException {
-        assertEquals(3000, calc(3000, 14));
+    public void ThirdCaseDay15() throws IOException {
+        assertEquals(3000, calc(3000, 15));
     }
 
     @Test
-    public void FourthCaseDay17() throws IOException {
-        assertEquals(3066, calc(3000, 17));
+    public void FourthCaseDay16() throws IOException {
+        assertEquals(3063, calc(3000, 16));
     }
 
     @Test
-    public void FourthCaseDay29() throws IOException {
-        assertEquals(3102, calc(3000, 29));
+    public void FourthCaseDay30() throws IOException {
+        assertEquals(3105, calc(3000, 30));
     }
 }
