@@ -21,6 +21,6 @@ public class Principal {
         day = myObj.nextInt();
 
         float result = aluguel.Calc(nominal, day);
-        System.out.println("resp -->  "+result);
+        System.out.println("Bruno Henique de Oliveira Silva ---Consumindo api -->  "+result);
     }
 }
