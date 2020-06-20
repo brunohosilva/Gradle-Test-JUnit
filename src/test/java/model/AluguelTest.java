@@ -13,10 +13,11 @@ public class AluguelTest {
     }
 
    // -----------------------   Casos de testes --------------------------------//
-   @Test
-   public void CaseDay0() throws IOException {
-       assertEquals(2700, calc(3000, 0));
-   }
+
+    @Test
+    public void CaseDay0() throws IOException {
+        assertEquals(-1, calc(3000, 0));
+    }
 
     @Test
     public void CaseDay1() throws IOException {
@@ -44,11 +45,6 @@ public class AluguelTest {
     }
 
     @Test
-    public void CaseDay7() throws IOException {
-        assertEquals(2850, calc(3000, 7) );
-    }
-
-    @Test
     public void CaseDay9() throws IOException {
         assertEquals(2850, calc(3000, 9) );
     }
@@ -61,11 +57,6 @@ public class AluguelTest {
     @Test
     public void CaseDay11() throws IOException {
         assertEquals(3000, calc(3000, 11));
-    }
-
-    @Test
-    public void CaseDay12() throws IOException {
-        assertEquals(3000, calc(3000, 12));
     }
 
     @Test
@@ -84,13 +75,8 @@ public class AluguelTest {
     }
 
     @Test
-    public void CaseDay17() throws IOException {
-        assertEquals(3066, calc(3000, 17));
-    }
-
-    @Test
     public void CaseDay29() throws IOException {
-        assertEquals(3102, calc(3000, 30));
+        assertEquals(3102, calc(3000, 29));
     }
 
     @Test
