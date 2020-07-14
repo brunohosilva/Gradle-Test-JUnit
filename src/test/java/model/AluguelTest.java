@@ -1,6 +1,9 @@
 package model;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import java.io.IOException;
 
@@ -12,7 +15,41 @@ public class AluguelTest {
         return aluguel.Calc(nominal, day);
     }
 
-   // -----------------------   Casos de testes --------------------------------//
+   // -----------------------   Casos de testes parametrizados usando CSVSOURCE (array de valores para ir testando) --------------------------------//
+
+    @ParameterizedTest
+    @CsvSource(value={
+            "-1:0",
+            "2700:1",
+            "2700:2",
+            "2700:4",
+            "2700:5",
+            "2850:6",
+            "2850: 9",
+            "2850: 10",
+            "3000: 11",
+            "3000: 14",
+            "3000: 15",
+            "3063: 16",
+            "3102:29",
+            "3105:30",
+            "-1: 31"
+            }
+            , delimiter = ':')
+    public void TestAluguelCsv(int expected, int day) throws IOException {
+        assertEquals(expected, calc(3000, day));
+    }
+
+    // -----------------------   Casos de testes parametrizado usando arquivo com os dados a serem testados --------------------------------//
+
+    @ParameterizedTest(name="Teste {index} => expected={0}," + "day={1}")
+    @CsvFileSource(resources="/valores_teste.csv", delimiter = ',')
+    public void TestAluguelCsvFile(int expected, int day) throws IOException {
+        assertEquals(expected, calc(3000, day));
+    }
+
+    // -----------------------   Casos de testes separados por metodos --------------------------------//
+
 
     @Test
     public void CaseDay0() throws IOException {
